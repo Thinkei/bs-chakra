@@ -1,9 +1,8 @@
+open Chakra;
 module Example = {
   [@react.component]
   let make = () => {
-    <div>
-    {"Hello" |> React.string}
-    </div>;
+    <ThemeProvider> <CSSReset /> <ToastExample /> </ThemeProvider>;
   };
 };
 
