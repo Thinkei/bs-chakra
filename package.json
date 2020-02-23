@@ -1,0 +1,38 @@
+{
+  "name": "bs-chakra",
+  "version": "0.0.1",
+  "description": "ReasonML binding for Chakra",
+  "main": "src/Chakra.re",
+  "author": "Hieu Pham <hieu.pham@employmenthero.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "bsb -clean -make-world -w",
+    "dev": "parcel ./examples/index.html"
+  },
+  "files": [
+    "src",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "reasonml",
+    "bucklescript",
+    "chakra-ui",
+    "chakra"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thinkei/bs-chakra"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.5.2",
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "emotion-theming": "^10.0.27",
+    "reason-react": "^0.7.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^7.1.1",
+    "bsb-js": "^1.1.7",
+    "parcel-bundler": "^1.12.4"
+  }
+}
