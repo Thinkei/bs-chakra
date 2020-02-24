@@ -1,12 +1,13 @@
 type status = [ | `success | `danger | `warning | `info];
 
+[@bs.deriving jsConverter]
 type position = [
   | `top
-  | `topLeft
-  | `topRight
+  | [@bs.as "top-left"] `topLeft
+  | [@bs.as "top-right"] `topRight
   | `bottom
-  | `bottomLeft
-  | `bottomRight
+  | [@bs.as "bottom-left"] `bottomLeft
+  | [@bs.as "bottom-right"] `bottomRight
 ];
 
 type renderProps = {
@@ -14,19 +15,60 @@ type renderProps = {
   id: string,
 };
 
+type duration =
+  | Milliseconds(int)
+  | NeverDismiss;
+
 [@bs.deriving abstract]
 type t = {
   title: string,
-  [@bs.optional] isClosable: bool,
-  [@bs.optional] onClose: unit => unit,
-  [@bs.optional] description: string,
-  [@bs.optional] status,
-  [@bs.optional] duration: int,
-  [@bs.optional] position,
-  [@bs.optional] render: renderProps => React.element,
+  [@bs.optional]
+  isClosable: bool,
+  [@bs.optional]
+  onClose: unit => unit,
+  [@bs.optional]
+  description: string,
+  [@bs.optional]
+  status,
+  duration: Js.Nullable.t(int),
+  [@bs.optional]
+  position: string,
+  [@bs.optional]
+  render: renderProps => React.element,
 };
 
 [@bs.module "@chakra-ui/core"]
-external useToast: (. unit) => (. t) => unit = "useToast";
+external _useToast: (. unit) => (. t) => unit = "useToast";
 
-let makeToastProps = t;
+let useToast =
+    (
+      ~title,
+      ~isClosable=?,
+      ~onClose=?,
+      ~description=?,
+      ~status=?,
+      ~duration=?,
+      ~position=?,
+      ~render=?,
+      (),
+    ) => {
+  let toast = _useToast(.);
+  let props =
+    t(
+      ~title,
+      ~isClosable?,
+      ~onClose?,
+      ~description?,
+      ~status?,
+      ~duration=
+        switch (duration) {
+        | None => Js.Nullable.undefined
+        | Some(Milliseconds(ms)) => Js.Nullable.return(ms)
+        | Some(NeverDismiss) => Js.Nullable.null
+        },
+      ~position=?Belt.Option.map(position, positionToJs),
+      ~render?,
+      (),
+    );
+  () => toast(. props);
+};
