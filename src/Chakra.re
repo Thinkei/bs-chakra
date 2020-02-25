@@ -6,3 +6,7 @@ module Checkbox = Chakra__Checkbox;
 module CheckboxGroup = Chakra__CheckboxGroup;
 module Radio = Chakra__Radio;
 module RadioGroup = Chakra__RadioGroup;
+module Stack = Chakra__Stack;
+module Text = Chakra__Text;
+module Divider = Chakra__Divider;
+module Heading = Chakra__Heading;
