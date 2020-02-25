@@ -2,7 +2,12 @@ open Chakra;
 module Example = {
   [@react.component]
   let make = () => {
-    <ThemeProvider> <CSSReset /> <ToastExample /> </ThemeProvider>;
+    <ThemeProvider>
+      <CSSReset />
+      <ToastExample />
+      <CheckboxExample />
+      <RadioExample />
+    </ThemeProvider>;
   };
 };
 
