@@ -127,7 +127,7 @@ type color = [
 ];
 
 [@bs.deriving jsConverter]
-type variantColor = [
+type colorVariant = [
   | `black
   | `transparent
   | `white
@@ -147,7 +147,7 @@ type variantColor = [
 type size = [ | `sm | `md | `lg];
 
 [@bs.deriving jsConverter]
-type variantButton = [ | `outline | `ghost | `unstyled | `link | `solid];
+type buttonVariant = [ | `outline | `ghost | `unstyled | `link | `solid];
 
 [@bs.deriving jsConverter]
 type iconRole = [ | `presentation | `img];
@@ -320,3 +320,9 @@ type letterSpacing = [
   | `wider
   | `widest
 ];
+
+[@bs.deriving jsConverter]
+type inputVariant = [ | `outline | `unstyled | `flushed | `filled];
+
+[@bs.deriving jsConverter]
+type inputType = [ | `text | `password];

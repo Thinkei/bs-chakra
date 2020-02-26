@@ -30,7 +30,7 @@ let makeProps =
     ) =>
   makeProps(
     ~ariaLabel?,
-    ~variantColor=?Option.map(variantColor, variantColorToJs),
+    ~variantColor=?Option.map(variantColor, colorVariantToJs),
     ~variant?,
     ~isDisabled?,
     ~isLoading?,

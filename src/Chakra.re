@@ -20,3 +20,7 @@ module Icon = Chakra__Icon;
 module Flex = Chakra__Flex;
 module Alert = Chakra__Alert;
 module AlertIcon = Chakra__AlertIcon;
+module InputLeftAddon = Chakra__InputLeftAddon;
+module InputRightAddon = Chakra__InputRightAddon;
+module InputGroup = Chakra__InputGroup;
+module Input = Chakra__Input;

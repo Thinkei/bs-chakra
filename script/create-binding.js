@@ -5,7 +5,7 @@ const CUSTOM_TYPE = [
   "color",
   "size",
   "variantColor",
-  "variantButton",
+  "buttonVariant",
   "icon",
   "iconRole",
   "status",
@@ -16,7 +16,8 @@ const CUSTOM_TYPE = [
   "justifyContent",
   "overflow",
   "shallow",
-  "lineHeight"
+  "lineHeight",
+  "inputVariant"
 ];
 
 const inquirer = require("inquirer");
@@ -60,7 +61,7 @@ let makeProps =
           return `~${prop.name}=?Option.map(${prop.name}, ${prop.name}ToJs)`;
         }
 
-        return `~${prop.name}=${prop.name}ToJs(${prop.name})`;
+        return `~${prop.name}=${prop.type}ToJs(${prop.name})`;
       }
 
       if (prop.optional) {

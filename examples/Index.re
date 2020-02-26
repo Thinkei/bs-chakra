@@ -26,6 +26,7 @@ module Example = {
         <Group title="Checkbox"> <CheckboxExample /> </Group>
         <Group title="Radio"> <RadioExample /> </Group>
         <Group title="Switch"> <SwitchExample /> </Group>
+        <Group title="Input"> <InputExample /> </Group>
       </Stack>
     </ThemeProvider>;
   };
