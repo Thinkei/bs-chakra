@@ -1,6 +1,14 @@
 const fs = require("fs");
 
-const CUSTOM_TYPE = ["color", "size", "variantColor", "variantButton"];
+const NATIVE_TYPE = ["bool", "string", "int", "float"];
+const CUSTOM_TYPE = [
+  "color",
+  "size",
+  "variantColor",
+  "variantButton",
+  "icon",
+  "iconRole"
+];
 
 const inquirer = require("inquirer");
 inquirer.registerPrompt("recursive", require("inquirer-recursive"));
@@ -121,18 +129,17 @@ const promp = () =>
               name: "type",
               message: "type",
               choices: [
-                "string",
-                "int",
-                "bool",
-                new inquirer.Separator(),
-                "ReactEvent.Form.t => unit",
-                "unit => unit",
-                "int => unit",
-                "string => unit",
+                ...NATIVE_TYPE,
                 new inquirer.Separator(),
                 "React.element",
                 new inquirer.Separator(),
-                ...CUSTOM_TYPE
+                ...CUSTOM_TYPE,
+                new inquirer.Separator(),
+                ...NATIVE_TYPE.map(t => `${t} => unit`),
+                new inquirer.Separator(),
+                ...CUSTOM_TYPE.map(t => `${t} => unit`),
+                new inquirer.Separator(),
+                "ReactEvent.Form.t => unit"
               ]
             }
           ]
