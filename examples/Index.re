@@ -25,6 +25,7 @@ module Example = {
         <Group title="Toast, Button"> <ToastExample /> </Group>
         <Group title="Checkbox"> <CheckboxExample /> </Group>
         <Group title="Radio"> <RadioExample /> </Group>
+        <Group title="Switch"> <SwitchExample /> </Group>
       </Stack>
     </ThemeProvider>;
   };
