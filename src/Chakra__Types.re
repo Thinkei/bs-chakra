@@ -212,3 +212,4 @@ type icon = [
   | [@bs.as "small-add"] `smallAdd
   | [@bs.as "check-circle"] `checkCircle
   | [@bs.as "view-off"] `viewOff
+];
