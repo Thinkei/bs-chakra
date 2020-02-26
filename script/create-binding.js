@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const CUSTOM_TYPE = ["color", "size", "variantColor"];
+const CUSTOM_TYPE = ["color", "size", "variantColor", "variantButton"];
 
 const inquirer = require("inquirer");
 inquirer.registerPrompt("recursive", require("inquirer-recursive"));

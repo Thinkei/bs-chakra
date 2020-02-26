@@ -145,3 +145,6 @@ type variantColor = [
 
 [@bs.deriving jsConverter]
 type size = [ | `sm | `md | `lg];
+
+[@bs.deriving jsConverter]
+type variantButton = [ | `outline | `ghost | `unstyled | `link | `solid];
