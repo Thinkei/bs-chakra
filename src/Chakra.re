@@ -14,3 +14,5 @@ module Switch = Chakra__Switch;
 module Accordion = Chakra__Accordion;
 module AccordionItem = Chakra__AccordionItem;
 module AccordionHeader = Chakra__AccordionHeader;
+module AccordionPanel = Chakra__AccordionPanel;
+module Collapse = Chakra__Collapse;
