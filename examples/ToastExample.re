@@ -10,7 +10,7 @@ let make = () => {
       ~position=`topRight,
       (),
     );
-  <Button variantColor="green" onClick={_ => {toast()}}>
+  <Button variantColor=`green onClick={_ => {toast()}}>
     {"Show toast" |> React.string}
   </Button>;
 };

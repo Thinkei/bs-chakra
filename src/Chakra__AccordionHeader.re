@@ -11,6 +11,7 @@ external make:
     ~isLoading: bool=?,
     ~loadingText: string=?,
     ~size: string=?,
+    ~onClick: ReactEvent.Mouse.t => unit=?,
     ~children: React.element
   ) =>
   React.element =
