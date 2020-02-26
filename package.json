@@ -11,7 +11,7 @@
     "generate": "node ./script/create-binding.js"
   },
   "lint-staged": {
-    "*.{re,rei}": [
+    "*": [
       "bsrefmt --in-place **/*.re",
       "git add"
     ]
