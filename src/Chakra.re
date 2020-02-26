@@ -17,3 +17,4 @@ module AccordionHeader = Chakra__AccordionHeader;
 module AccordionPanel = Chakra__AccordionPanel;
 module Collapse = Chakra__Collapse;
 module Icon = Chakra__Icon;
+module Flex = Chakra__Flex;

@@ -282,3 +282,41 @@ type shadow = [
   | `inner
   | `none
 ];
+
+[@bs.deriving jsConverter]
+type lineHeight = [ | `normal | `base | `shorter | `short | `tall | `taller];
+
+[@bs.deriving jsConverter]
+type colorHue = [
+  | [@bs.as "50"] `_50
+  | [@bs.as "100"] `_100
+  | [@bs.as "200"] `_200
+  | [@bs.as "300"] `_300
+  | [@bs.as "400"] `_400
+  | [@bs.as "500"] `_500
+  | [@bs.as "600"] `_600
+  | [@bs.as "700"] `_700
+  | [@bs.as "800"] `_800
+  | [@bs.as "900"] `_900
+];
+
+[@bs.deriving jsConverter]
+type radii = [ | `none | `sm | `md | `lg | `full];
+
+[@bs.deriving jsConverter]
+type border = [
+  | `none
+  | [@bs.as "1px"] `_1px
+  | [@bs.as "2px"] `_2px
+  | [@bs.as "4px"] `_4px
+];
+
+[@bs.deriving jsConverter]
+type letterSpacing = [
+  | `tighter
+  | `tight
+  | `normal
+  | `wide
+  | `wider
+  | `widest
+];
