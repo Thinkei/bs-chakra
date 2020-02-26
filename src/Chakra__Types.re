@@ -213,3 +213,72 @@ type icon = [
   | [@bs.as "check-circle"] `checkCircle
   | [@bs.as "view-off"] `viewOff
 ];
+
+[@bs.deriving jsConverter]
+type status = [ | `error | `success | `warning | `info];
+
+[@bs.deriving jsConverter]
+type alertStyle = [
+  | `subtle
+  | `solid
+  | [@bs.as "left-accent"] `leftAccent
+  | [@bs.as "top-accent"] `topAccent
+];
+
+[@bs.deriving jsConverter]
+type flexDirection = [
+  | `row
+  | [@bs.as "row-reverse"] `rowReverse
+  | `column
+  | [@bs.as "column-reverse"] `columnReverse
+];
+
+[@bs.deriving jsConverter]
+type flexWrap = [
+  | `wrap
+  | `nowrap
+  | `unset
+  | [@bs.as "wrap-reverse"] `wrapReverse
+];
+
+[@bs.deriving jsConverter]
+type flexAlignment = [
+  | [@bs.as "flex-start"] `flexStart
+  | [@bs.as "flex-end"] `flexEnd
+  | [@bs.as "space-around"] `spaceAround
+  | [@bs.as "space-between"] `spaceBetween
+  | `center
+];
+
+[@bs.deriving jsConverter]
+type justifyContent = [
+  | `start
+  | `center
+  | [@bs.as "space-between"] `spaceBetween
+  | [@bs.as "flex-end"] `flexEnd
+  | [@bs.as "space-around"] `spaceAround
+  | [@bs.as "space-evenly"] `spaceEvenly
+];
+
+[@bs.deriving jsConverter]
+type overflow = [
+  | `overflow
+  | `visible
+  | `scroll
+  | `auto
+  | `initial
+  | `hidden
+  | `unset
+];
+
+[@bs.deriving jsConverter]
+type shadow = [
+  | `sm
+  | `md
+  | `lg
+  | `xl
+  | [@bs.as "2xl"] `xxl
+  | `outline
+  | `inner
+  | `none
+];

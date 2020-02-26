@@ -7,7 +7,16 @@ const CUSTOM_TYPE = [
   "variantColor",
   "variantButton",
   "icon",
-  "iconRole"
+  "iconRole",
+  "status",
+  "alertStyle",
+  "flexDirection",
+  "flexWrap",
+  "flexAlignment",
+  "justifyContent",
+  "overflow",
+  "shallow",
+  "lineHeight"
 ];
 
 const inquirer = require("inquirer");
@@ -136,8 +145,6 @@ const promp = () =>
                 ...CUSTOM_TYPE,
                 new inquirer.Separator(),
                 ...NATIVE_TYPE.map(t => `${t} => unit`),
-                new inquirer.Separator(),
-                ...CUSTOM_TYPE.map(t => `${t} => unit`),
                 new inquirer.Separator(),
                 "ReactEvent.Form.t => unit"
               ]
