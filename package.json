@@ -8,8 +8,18 @@
   "scripts": {
     "start": "bsb -clean -make-world -w",
     "dev": "parcel ./examples/index.html",
-    "format": "bsrefmt --in-place **/*.re",
-    "generate": "node ./script/create-binding.js; npm run format"
+    "generate": "node ./script/create-binding.js"
+  },
+  "lint-staged": {
+    "*.{re,rei}": [
+      "bsrefmt --in-place **/*.re",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "files": [
     "src",
@@ -30,13 +40,15 @@
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
-    "inquirer": "^7.0.4",
-    "inquirer-recursive": "0.0.6",
     "reason-react": "^0.7.0"
   },
   "devDependencies": {
     "bs-platform": "^7.1.1",
     "bsb-js": "^1.1.7",
+    "husky": "^4.2.3",
+    "inquirer": "^7.0.4",
+    "inquirer-recursive": "0.0.6",
+    "lint-staged": "^10.0.8",
     "parcel-bundler": "^1.12.4"
   }
 }
