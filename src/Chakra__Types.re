@@ -144,8 +144,4 @@ type variantColor = [
 ];
 
 [@bs.deriving jsConverter]
-type size = [
-  | `sm
-  | `md
-  | `lg
-];
+type size = [ | `sm | `md | `lg];
