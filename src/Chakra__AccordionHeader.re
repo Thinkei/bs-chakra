@@ -14,7 +14,7 @@ external make:
     ~children: React.element
   ) =>
   React.element =
-  "Button";
+  "AccordionHeader";
 
 let makeProps =
     (

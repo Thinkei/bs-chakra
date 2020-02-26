@@ -13,3 +13,4 @@ module Heading = Chakra__Heading;
 module Switch = Chakra__Switch;
 module Accordion = Chakra__Accordion;
 module AccordionItem = Chakra__AccordionItem;
+module AccordionHeader = Chakra__AccordionHeader;
