@@ -24,7 +24,7 @@ let makeProps =
   makeProps(
     ~flexDirection=?Option.map(flexDirection, flexDirectionToJs),
     ~flexWrap=?Option.map(flexWrap, flexWrapToJs),
-    ~alignItems?,
+    ~alignItems=?Option.map(alignItems, flexAlignmentToJs),
     ~justifyContent=?Option.map(justifyContent, justifyContentToJs),
     ~children,
   );
