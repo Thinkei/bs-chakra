@@ -19,3 +19,4 @@ module Collapse = Chakra__Collapse;
 module Icon = Chakra__Icon;
 module Flex = Chakra__Flex;
 module Alert = Chakra__Alert;
+module AlertIcon = Chakra__AlertIcon;
