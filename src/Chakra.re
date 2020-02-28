@@ -38,3 +38,4 @@ module DrawerHeader = Chakra__DrawerHeader;
 module DrawerCloseButton = Chakra__DrawerCloseButton;
 module DrawerBody = Chakra__DrawerBody;
 module DrawerFooter = Chakra__DrawerFooter;
+module CloseButton = Chakra__CloseButton;
