@@ -329,3 +329,6 @@ type inputType = [ | `text | `password];
 
 [@bs.deriving jsConverter]
 type scrollBehavior = [ | `inside | `outside];
+
+[@bs.deriving jsConverter]
+type placement = [ | `left | `right | `top | `bottom];

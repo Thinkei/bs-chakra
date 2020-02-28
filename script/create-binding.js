@@ -19,7 +19,8 @@ const CUSTOM_TYPE = [
   "shallow",
   "size",
   "status",
-  "variantColor"
+  "variantColor",
+  "placement"
 ];
 
 const EVENT_TYPE = ["ReactEvent.Form.t", "ReactEvent.Mouse.t"];
