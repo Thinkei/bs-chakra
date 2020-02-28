@@ -1,24 +1,28 @@
 const fs = require("fs");
 
 const NATIVE_TYPE = ["bool", "string", "int", "float"];
+
 const CUSTOM_TYPE = [
-  "color",
-  "size",
-  "variantColor",
-  "buttonVariant",
-  "icon",
-  "iconRole",
-  "status",
   "alertStyle",
+  "buttonVariant",
+  "color",
+  "flexAlignment",
   "flexDirection",
   "flexWrap",
-  "flexAlignment",
+  "icon",
+  "iconRole",
+  "inputVariant",
   "justifyContent",
-  "overflow",
-  "shallow",
   "lineHeight",
-  "inputVariant"
+  "overflow",
+  "scrollBehavior",
+  "shallow",
+  "size",
+  "status",
+  "variantColor"
 ];
+
+const EVENT_TYPE = ["ReactEvent.Form.t", "ReactEvent.Mouse.t"];
 
 const inquirer = require("inquirer");
 inquirer.registerPrompt("recursive", require("inquirer-recursive"));
@@ -142,12 +146,13 @@ const promp = () =>
                 ...NATIVE_TYPE,
                 new inquirer.Separator(),
                 "React.element",
+                "ReasonReact.reactRef",
                 new inquirer.Separator(),
                 ...CUSTOM_TYPE,
                 new inquirer.Separator(),
                 ...NATIVE_TYPE.map(t => `${t} => unit`),
                 new inquirer.Separator(),
-                "ReactEvent.Form.t => unit"
+                ...EVENT_TYPE.map(t => `${t} => unit`)
               ]
             }
           ]

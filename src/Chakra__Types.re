@@ -326,3 +326,6 @@ type inputVariant = [ | `outline | `unstyled | `flushed | `filled];
 
 [@bs.deriving jsConverter]
 type inputType = [ | `text | `password];
+
+[@bs.deriving jsConverter]
+type scrollBehavior = [ | `inside | `outside];
