@@ -14,6 +14,7 @@ external make:
     ~isInvalid: bool=?,
     ~ariaLabel: string=?,
     ~ariaLabelledby: string=?,
+    ~onChange: ReactEvent.Form.t => unit=?,
     ~children: React.element=?
   ) =>
   React.element =
@@ -31,6 +32,7 @@ let makeProps =
       ~isInvalid=?,
       ~ariaLabel=?,
       ~ariaLabelledby=?,
+      ~onChange=?,
       ~children=?,
     ) =>
   makeProps(
@@ -44,5 +46,6 @@ let makeProps =
     ~isInvalid?,
     ~ariaLabel?,
     ~ariaLabelledby?,
+    ~onChange?,
     ~children?,
   );
