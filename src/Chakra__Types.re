@@ -345,3 +345,15 @@ type tabVariant = [
 
 [@bs.deriving jsConverter]
 type orientation = [ | `horizontal | `vertical];
+
+[@bs.deriving jsConverter]
+type tooltipPlacement = [
+  | `left
+  | `right
+  | `top
+  | `bottom
+  | [@bs.as "left-end"] `leftEnd
+  | [@bs.as "right-end"] `rightEnd
+  | [@bs.as "auto-start"] `autoStart
+  | [@bs.as "auto-end"] `autoEnd
+];

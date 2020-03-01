@@ -22,7 +22,8 @@ const CUSTOM_TYPE = [
   "variantColor",
   "placement",
   "tabVariant",
-  "orientation"
+  "orientation",
+  "tooltipPlacement"
 ];
 
 const EVENT_TYPE = ["ReactEvent.Form.t", "ReactEvent.Mouse.t"];
