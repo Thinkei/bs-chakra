@@ -20,7 +20,7 @@ let make = () => {
     />
     <InputGroup size=`lg>
       <Input
-        type_={isShowingPassword ? `text : `password}
+        _type={isShowingPassword ? `text : `password}
         placeholder="Enter password"
       />
       <InputRightAddon>

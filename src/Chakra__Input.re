@@ -18,7 +18,7 @@ external make:
     ~value: string=?,
     ~onChange: ReactEvent.Form.t => unit=?,
     ~placeholder: string=?,
-    ~type_: string=?
+    ~_type: string=?
   ) =>
   React.element =
   "Input";
@@ -39,7 +39,7 @@ let makeProps =
       ~value=?,
       ~onChange=?,
       ~placeholder=?,
-      ~type_=?,
+      ~_type=?,
     ) =>
   makeProps(
     ~ariaLabel?,
@@ -56,5 +56,5 @@ let makeProps =
     ~value?,
     ~onChange?,
     ~placeholder?,
-    ~type_=?Option.map(type_, inputTypeToJs),
+    ~_type=?Option.map(_type, inputTypeToJs),
   );
