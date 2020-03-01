@@ -12,6 +12,8 @@ external make:
     ~loadingText: string=?,
     ~size: string=?,
     ~onClick: ReactEvent.Mouse.t => unit=?,
+    ~leftIcon: string=?,
+    ~rightIcon: string=?,
     ~children: React.element
   ) =>
   React.element =
@@ -26,6 +28,8 @@ let makeProps =
       ~isLoading=?,
       ~loadingText=?,
       ~size=?,
+      ~leftIcon=?,
+      ~rightIcon=?,
       ~children,
     ) =>
   makeProps(
@@ -36,5 +40,7 @@ let makeProps =
     ~isLoading?,
     ~loadingText?,
     ~size=?Option.map(size, sizeToJs),
+    ~leftIcon=?Option.map(leftIcon, iconToJs),
+    ~rightIcon=?Option.map(rightIcon, iconToJs),
     ~children,
   );

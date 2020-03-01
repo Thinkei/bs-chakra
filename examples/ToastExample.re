@@ -5,6 +5,7 @@ let make = () => {
   let toast = Toast.useToast();
   <Button
     variantColor=`green
+    rightIcon=`arrowForward
     onClick={_ => {
       toast(
         ~isClosable=true,
