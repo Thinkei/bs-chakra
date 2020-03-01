@@ -325,7 +325,7 @@ type letterSpacing = [
 type inputVariant = [ | `outline | `unstyled | `flushed | `filled];
 
 [@bs.deriving jsConverter]
-type inputType = [ | `text | `password];
+type inputType = [ | `text | `password | `email];
 
 [@bs.deriving jsConverter]
 type scrollBehavior = [ | `inside | `outside];
