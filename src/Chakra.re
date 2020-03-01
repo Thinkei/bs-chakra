@@ -46,3 +46,4 @@ module TabPanels = Chakra__TabPanels;
 module Tab = Chakra__Tab;
 module TabPanel = Chakra__TabPanel;
 module ButtonGroup = Chakra__ButtonGroup;
+module Spinner = Chakra__Spinner;
