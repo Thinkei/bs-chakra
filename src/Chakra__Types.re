@@ -144,7 +144,7 @@ type colorVariant = [
 ];
 
 [@bs.deriving jsConverter]
-type size = [ | `sm | `md | `lg];
+type size = [ | `sm | `md | `xl | `lg];
 
 [@bs.deriving jsConverter]
 type buttonVariant = [ | `outline | `ghost | `unstyled | `link | `solid];

@@ -22,5 +22,5 @@ let makeProps =
     ~speed?,
     ~label?,
     ~color=?Option.map(color, colorToJs),
-    ~emptyColor?,
+    ~emptyColor=?Option.map(emptyColor, colorToJs),
   );

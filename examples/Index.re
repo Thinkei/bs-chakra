@@ -28,6 +28,7 @@ module Example = {
         <Group title="Switch"> <SwitchExample /> </Group>
         <Group title="Input"> <InputExample /> </Group>
         <Group title="Select"> <SelectExample /> </Group>
+        <Group title="Spinner"> <SpinnerExample /> </Group>
       </Stack>
     </ThemeProvider>;
   };
