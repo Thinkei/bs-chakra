@@ -332,3 +332,16 @@ type scrollBehavior = [ | `inside | `outside];
 
 [@bs.deriving jsConverter]
 type placement = [ | `left | `right | `top | `bottom];
+
+[@bs.deriving jsConverter]
+type tabVariant = [
+  | `line
+  | `enclosed
+  | [@bs.as "enclosed-colored"] `enclosedColored
+  | [@bs.as "soft-rounded"] `softRounded
+  | [@bs.as "solid-rounded"] `solidRounded
+  | `unstyled
+];
+
+[@bs.deriving jsConverter]
+type orientation = [ | `horizontal | `vertical];

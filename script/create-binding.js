@@ -20,7 +20,9 @@ const CUSTOM_TYPE = [
   "size",
   "status",
   "variantColor",
-  "placement"
+  "placement",
+  "tabVariant",
+  "orientation"
 ];
 
 const EVENT_TYPE = ["ReactEvent.Form.t", "ReactEvent.Mouse.t"];
