@@ -16,6 +16,7 @@ external make:
     ~isReadOnly: bool=?,
     ~onChange: ReactEvent.Form.t => unit=?,
     ~value: string=?,
+    ~defaultValue: string=?,
     ~children: React.element
   ) =>
   React.element =
@@ -35,6 +36,7 @@ let makeProps =
       ~isReadOnly=?,
       ~onChange=?,
       ~value=?,
+      ~defaultValue=?,
       ~children,
     ) =>
   makeProps(
@@ -50,5 +52,6 @@ let makeProps =
     ~isReadOnly?,
     ~onChange?,
     ~value?,
+    ~defaultValue?,
     ~children,
   );
