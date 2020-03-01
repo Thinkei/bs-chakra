@@ -14,6 +14,8 @@ external make:
     ~isInvalid: bool=?,
     ~isRequired: bool=?,
     ~isReadOnly: bool=?,
+    ~onChange: ReactEvent.Form.t => unit=?,
+    ~value: string=?,
     ~children: React.element
   ) =>
   React.element =
@@ -31,6 +33,8 @@ let makeProps =
       ~isInvalid=?,
       ~isRequired=?,
       ~isReadOnly=?,
+      ~onChange=?,
+      ~value=?,
       ~children,
     ) =>
   makeProps(
@@ -44,5 +48,7 @@ let makeProps =
     ~isInvalid?,
     ~isRequired?,
     ~isReadOnly?,
+    ~onChange?,
+    ~value?,
     ~children,
   );
