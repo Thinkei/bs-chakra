@@ -41,35 +41,36 @@ type t = {
 [@bs.module "@chakra-ui/core"]
 external _useToast: (. unit) => (. t) => unit = "useToast";
 
-let useToast =
-    (
-      ~title,
-      ~isClosable=?,
-      ~onClose=?,
-      ~description=?,
-      ~status=?,
-      ~duration=?,
-      ~position=?,
-      ~render=?,
-      (),
-    ) => {
+let useToast = () => {
   let toast = _useToast(.);
-  let props =
-    t(
-      ~title,
-      ~isClosable?,
-      ~onClose?,
-      ~description?,
-      ~status=?Belt.Option.map(status, statusToJs),
-      ~duration=
-        switch (duration) {
-        | None => Js.Nullable.undefined
-        | Some(Milliseconds(ms)) => Js.Nullable.return(ms)
-        | Some(NeverDismiss) => Js.Nullable.null
-        },
-      ~position=?Belt.Option.map(position, positionToJs),
-      ~render?,
-      (),
-    );
-  () => toast(. props);
+  (
+    ~title,
+    ~isClosable=?,
+    ~onClose=?,
+    ~description=?,
+    ~status=?,
+    ~duration=?,
+    ~position=?,
+    ~render=?,
+    (),
+  ) => {
+    let props =
+      t(
+        ~title,
+        ~isClosable?,
+        ~onClose?,
+        ~description?,
+        ~status=?Belt.Option.map(status, statusToJs),
+        ~duration=
+          switch (duration) {
+          | None => Js.Nullable.undefined
+          | Some(Milliseconds(ms)) => Js.Nullable.return(ms)
+          | Some(NeverDismiss) => Js.Nullable.null
+          },
+        ~position=?Belt.Option.map(position, positionToJs),
+        ~render?,
+        (),
+      );
+    toast(. props);
+  };
 };
