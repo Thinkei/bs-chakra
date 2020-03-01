@@ -8,6 +8,7 @@ let make = () => {
       ~title="Account created",
       ~description="We've created your account for you.",
       ~position=`topRight,
+      ~status=`warning,
       (),
     );
   <Button variantColor=`green onClick={_ => {toast()}}>

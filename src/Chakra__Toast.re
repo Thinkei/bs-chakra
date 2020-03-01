@@ -1,3 +1,4 @@
+[@bs.deriving jsConverter]
 type status = [ | `success | `danger | `warning | `info];
 
 [@bs.deriving jsConverter]
@@ -29,7 +30,7 @@ type t = {
   [@bs.optional]
   description: string,
   [@bs.optional]
-  status,
+  status: string,
   duration: Js.Nullable.t(int),
   [@bs.optional]
   position: string,
@@ -59,7 +60,7 @@ let useToast =
       ~isClosable?,
       ~onClose?,
       ~description?,
-      ~status?,
+      ~status=?Belt.Option.map(status, statusToJs),
       ~duration=
         switch (duration) {
         | None => Js.Nullable.undefined
