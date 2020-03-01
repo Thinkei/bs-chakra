@@ -45,3 +45,4 @@ module TabList = Chakra__TabList;
 module TabPanels = Chakra__TabPanels;
 module Tab = Chakra__Tab;
 module TabPanel = Chakra__TabPanel;
+module ButtonGroup = Chakra__ButtonGroup;
