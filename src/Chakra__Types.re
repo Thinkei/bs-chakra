@@ -357,3 +357,6 @@ type tooltipPlacement = [
   | [@bs.as "auto-start"] `autoStart
   | [@bs.as "auto-end"] `autoEnd
 ];
+
+[@bs.deriving jsConverter]
+type buttonType = [ | `submit | `reset | `button];

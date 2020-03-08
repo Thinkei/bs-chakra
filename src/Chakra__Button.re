@@ -14,6 +14,7 @@ external make:
     ~onClick: ReactEvent.Mouse.t => unit=?,
     ~leftIcon: string=?,
     ~rightIcon: string=?,
+    ~_type: string=?,
     ~children: React.element
   ) =>
   React.element =
@@ -30,6 +31,7 @@ let makeProps =
       ~size=?,
       ~leftIcon=?,
       ~rightIcon=?,
+      ~_type=?,
       ~children,
     ) =>
   makeProps(
@@ -42,5 +44,6 @@ let makeProps =
     ~size=?Option.map(size, sizeToJs),
     ~leftIcon=?Option.map(leftIcon, iconToJs),
     ~rightIcon=?Option.map(rightIcon, iconToJs),
+    ~_type=?Option.map(_type, buttonTypeToJs),
     ~children,
   );
