@@ -1,6 +1,6 @@
 {
   "name": "bs-chakra",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ReasonML binding for Chakra",
   "main": "src/Chakra.re",
   "author": "Hieu Pham <hieu.pham@employmenthero.com>",
