@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "bs-chakra",
+  "env": {
+    "EH_NPM_TOKEN": "@eh-npm-token"
+  },
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }],
+  "routes": [
+    { "src": "/", "dest": "/index.html" }
+  ],
+  "build": {
+    "env": {
+      "EH_NPM_TOKEN": "@eh-npm-token"
+    }
+  }
+}

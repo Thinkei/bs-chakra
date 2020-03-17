@@ -9,7 +9,8 @@
     "start": "bsb -clean -make-world -w",
     "dev": "parcel ./examples/index.html",
     "generate": "node ./script/create-binding.js",
-    "format": "bsrefmt --in-place **/*.re"
+    "format": "bsrefmt --in-place **/*.re",
+    "now-build": "bsb -clean -make-world && parcel build ./examples/index.html"
   },
   "husky": {
     "hooks": {
