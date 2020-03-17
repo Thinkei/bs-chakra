@@ -1,6 +1,7 @@
 # ReasonML binding for Chakra UI
 
 ReasonML binding for https://chakra-ui.com
+Examples https://bs-chakra.now.sh
 
 
 ## Install
