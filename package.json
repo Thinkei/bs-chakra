@@ -1,12 +1,11 @@
 {
   "name": "bs-chakra",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ReasonML binding for Chakra",
   "main": "src/Chakra.re",
   "author": "Hieu Pham <hieu.pham@employmenthero.com>",
   "license": "MIT",
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "bsb -clean -make-world -w",
     "dev": "parcel ./examples/index.html",
     "generate": "node ./script/create-binding.js",
@@ -44,10 +43,9 @@
     "husky": "^2.4.1",
     "inquirer": "^7.0.4",
     "inquirer-recursive": "0.0.6",
-    "npm-force-resolutions": "0.0.3",
     "parcel-bundler": "^1.12.4"
   },
   "resolutions": {
-    "minimist": "1.2.3"
+    "minimist": "1.2.5"
   }
 }
